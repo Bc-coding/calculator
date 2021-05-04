@@ -1,0 +1,173 @@
+.center {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid lightgrey;
+  background-color: #edf6f9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.container {
+  position: relative;
+}
+
+.calculator-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background: hsl(0deg 0% 0% / 0.25);
+  transform: translateX(15px) translateY(18px);
+}
+
+.calculator-shadow {
+  filter: blur(5px);
+}
+
+.calculator-edge {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background: hsl(208, 7%, 40%);
+  /* transform: translateY(15px); */
+  transform: translateX(6px) translateY(10px);
+}
+
+.calculator {
+  width: 400px;
+  height: 450px;
+  margin: 0 auto;
+
+  background-color: hsl(208, 7%, 46%);
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.window {
+  width: 62%;
+  height: 80px;
+  /* border: 1px solid pink; */
+  border-radius: 12px;
+  /* background-color: #8e9aaf; */
+  background: #c0c0c0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  /* border: 1px solid pink; */
+  padding: 10px 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+}
+
+.btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: hsl(0deg 0% 0% / 0.25);
+  transform: translateY(2px);
+}
+
+.shadow {
+  filter: blur(2px);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: hsl(207, 87%, 32%);
+}
+
+.edge {
+  background: linear-gradient(
+    to left,
+    hsl(207, 87%, 16%) 0%,
+    hsl(207, 87%, 32%) 8%,
+    hsl(207, 87%, 32%) 92%,
+    hsl(207, 87%, 16%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 1rem;
+  background: hsl(207, 87%, 53%);
+  color: white;
+  transform: translateY(-5px);
+}
+
+.btn:hover .front {
+  transform: translateY(-6px);
+}
+
+.btn:hover .shadow {
+  transform: translateY(4px);
+}
+
+.btn:active .front {
+  transform: translateY(-2px);
+}
+
+.btn:active .shadow {
+  transform: translateY(1px);
+}
+
+.btn {
+  transition: filter 600ms;
+}
+
+.btn {
+  -webkit-tap-highlight-color: transparent; /* remove the target */
+  user-select: none; /* make our button unselectable on IOS (select the text within the button) */
+}
+
+.btn:hover {
+  transition: filter 250ms;
+  filter: brightness(110%);
+}
+
+.btn:focus:not(:focus-visible) {
+  outline: none;
+}
