@@ -3,7 +3,7 @@
   height: 600px;
   margin: 0 auto;
   border: 1px solid lightgrey;
-  background-color: #edf6f9;
+  background-color: #fae1dd;
 
   display: flex;
   justify-content: center;
@@ -136,6 +136,17 @@
   background: hsl(207, 87%, 53%);
   color: white;
   transform: translateY(-5px);
+}
+
+.btn:nth-of-type(4n + 2) > .front {
+  padding: 15px 18px;
+}
+
+.btn:nth-of-type(1) > .front,
+.btn:nth-of-type(2) > .front,
+.btn:nth-of-type(3) > .front,
+.btn:nth-of-type(4n) > .front {
+  background: hsl(195, 100%, 49%);
 }
 
 .btn:hover .front {
