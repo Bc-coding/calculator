@@ -182,3 +182,15 @@
 .btn:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* button zero */
+
+.zero {
+  grid-column: 1 / span 2;
+}
+
+.zero .front,
+.zero .shadow,
+.zero .edge {
+  border-radius: 30px;
+}
